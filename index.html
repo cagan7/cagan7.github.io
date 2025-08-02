@@ -61,24 +61,17 @@
     .player-info {
       max-width: 400px;
       margin: 20px auto;
-      background: rgba(255, 255, 255, 0.1);
+      background: #fff; /* Beyaz arka plan */
+      color: #000;      /* Siyah yazı */
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
     .player-info h2 {
       margin-top: 0;
-      background: #fff;
-      color: #000;
-      padding: 5px 10px;
-      border-radius: 6px;
     }
     .info-row {
       margin: 8px 0;
-      background: #fff;
-      color: #000;
-      padding: 5px 10px;
-      border-radius: 6px;
     }
   </style>
 </head>
@@ -107,39 +100,39 @@
   <script>
     const players = [
       // Beşiktaş
-      { name: "Mert Günok", age: 35, position: "Kaleci", team: "Beşiktaş", market_value: "1m €" },          // 0
-      { name: "Victor Nelsson Semedo", age: 26, position: "Defans", team: "Beşiktaş", market_value: "10m €" }, // 1
-      { name: "Omar Colley", age: 32, position: "Defans", team: "Beşiktaş", market_value: "2.5m €" },       // 2
-      { name: "Rafa Silva", age: 31, position: "Orta saha", team: "Beşiktaş", market_value: "8m €" },      // 3
-      { name: "Orkun Kökçü", age: 24, position: "Orta saha", team: "Beşiktaş", market_value: "30m €" },   // 4
-      { name: "Abraham Tammy", age: 28, position: "Forvet", team: "Beşiktaş", market_value: "15m €" },    // 5
-      { name: "Ernest Muçi", age: 27, position: "Forvet", team: "Beşiktaş", market_value: "10m €" },       // 6
-      { name: "Milot Rashica", age: 27, position: "Forvet", team: "Beşiktaş", market_value: "6.5m €" },     // 7
-      { name: "Felix Uduokhai", age: 29, position: "Defans", team: "Beşiktaş", market_value: "7m €" },     // 8
-      { name: "David Jurásek", age: 24, position: "Defans", team: "Beşiktaş", market_value: "5m €" },      // 9
-      { name: "Mustafa Hekimoğlu", age: 30, position: "Orta saha", team: "Beşiktaş", market_value: "5m €" }, // 10
+      { name: "Mert Günok", age: 35, position: "Kaleci", team: "Beşiktaş", market_value: "1m €" },
+      { name: "Victor Nelsson Semedo", age: 26, position: "Defans", team: "Beşiktaş", market_value: "10m €" },
+      // Omar Colley çıkarıldı
+      { name: "Rafa Silva", age: 31, position: "Orta saha", team: "Beşiktaş", market_value: "8m €" },
+      { name: "Orkun Kökçü", age: 24, position: "Orta saha", team: "Beşiktaş", market_value: "30m €" },
+      { name: "Abraham Tammy", age: 28, position: "Forvet", team: "Beşiktaş", market_value: "15m €" },
+      { name: "Ernest Muçi", age: 27, position: "Forvet", team: "Beşiktaş", market_value: "10m €" },
+      { name: "Milot Rashica", age: 27, position: "Forvet", team: "Beşiktaş", market_value: "6.5m €" },
+      { name: "Felix Uduokhai", age: 29, position: "Defans", team: "Beşiktaş", market_value: "7m €" },
+      { name: "David Jurásek", age: 24, position: "Defans", team: "Beşiktaş", market_value: "5m €" },
+      { name: "Mustafa Hekimoğlu", age: 30, position: "Orta saha", team: "Beşiktaş", market_value: "5m €" },
 
       // Galatasaray
-      { name: "Davinson Sanchez", age: 29, position: "Defans", team: "Galatasaray", market_value: "20m €" },  // 11
-      { name: "Barış Alper Yılmaz", age: 25, position: "Forvet", team: "Galatasaray", market_value: "21m €" }, // 12
-      { name: "Leroy Sané", age: 29, position: "Orta saha", team: "Galatasaray", market_value: "32m €" },    // 13
-      { name: "Victor Osimhen", age: 27, position: "Forvet", team: "Galatasaray", market_value: "70m €" },   // 14
-      { name: "Yunus Akgün", age: 28, position: "Orta saha", team: "Galatasaray", market_value: "14m €" },  // 15
-      { name: "Lucas Torreira", age: 30, position: "Orta saha", team: "Galatasaray", market_value: "13m €" }, // 16
-      { name: "Gabriel Sara", age: 27, position: "Orta saha", team: "Galatasaray", market_value: "22m €" },   // 17
-      { name: "Mauro Icardi", age: 31, position: "Forvet", team: "Galatasaray", market_value: "9m €" },       // 18
-      { name: "Álvaro Morata", age: 30, position: "Forvet", team: "Galatasaray", market_value: "11m €" },     // 19
+      { name: "Davinson Sanchez", age: 29, position: "Defans", team: "Galatasaray", market_value: "20m €" },
+      { name: "Barış Alper Yılmaz", age: 25, position: "Forvet", team: "Galatasaray", market_value: "21m €" },
+      { name: "Leroy Sané", age: 29, position: "Orta saha", team: "Galatasaray", market_value: "32m €" },
+      { name: "Victor Osimhen", age: 27, position: "Forvet", team: "Galatasaray", market_value: "70m €" },
+      { name: "Yunus Akgün", age: 28, position: "Orta saha", team: "Galatasaray", market_value: "14m €" },
+      { name: "Lucas Torreira", age: 30, position: "Orta saha", team: "Galatasaray", market_value: "13m €" },
+      { name: "Gabriel Sara", age: 27, position: "Orta saha", team: "Galatasaray", market_value: "22m €" },
+      { name: "Mauro Icardi", age: 31, position: "Forvet", team: "Galatasaray", market_value: "9m €" },
+      { name: "Álvaro Morata", age: 30, position: "Forvet", team: "Galatasaray", market_value: "11m €" },
 
       // Fenerbahçe
-      { name: "Dominik Livaković", age: 31, position: "Kaleci", team: "Fenerbahçe", market_value: "9m €" },  // 20
-      { name: "Jhon Duran", age: 22, position: "Forvet", team: "Fenerbahçe", market_value: "12m €" },        // 21
-      { name: "Archie Brown", age: 23, position: "Defans", team: "Fenerbahçe", market_value: "7m €" },      // 22
-      { name: "İrfan Can Kahveci", age: 30, position: "Orta saha", team: "Fenerbahçe", market_value: "10m €" }, // 23
-      { name: "Fred", age: 30, position: "Orta saha", team: "Fenerbahçe", market_value: "10m €" },          // 24
-      { name: "Milan Škriniar", age: 32, position: "Stoper", team: "Fenerbahçe", market_value: "15m €" },   // 25
-      { name: "Sebastian Szymański", age: 27, position: "Orta saha", team: "Fenerbahçe", market_value: "15m €" }, // 26
-      { name: "Youssef En-Nesyri", age: 29, position: "Forvet", team: "Fenerbahçe", market_value: "24m €" },   // 27
-      { name: "Sofyan Amrabat", age: 29, position: "Orta saha", team: "Fenerbahçe", market_value: "17m €" }    // 28
+      { name: "Dominik Livaković", age: 31, position: "Kaleci", team: "Fenerbahçe", market_value: "9m €" },
+      { name: "Jhon Duran", age: 22, position: "Forvet", team: "Fenerbahçe", market_value: "12m €" },
+      { name: "Archie Brown", age: 23, position: "Defans", team: "Fenerbahçe", market_value: "7m €" },
+      { name: "İrfan Can Kahveci", age: 30, position: "Orta saha", team: "Fenerbahçe", market_value: "10m €" },
+      { name: "Fred", age: 30, position: "Orta saha", team: "Fenerbahçe", market_value: "10m €" },
+      { name: "Milan Škriniar", age: 32, position: "Stoper", team: "Fenerbahçe", market_value: "15m €" },
+      { name: "Sebastian Szymański", age: 27, position: "Orta saha", team: "Fenerbahçe", market_value: "15m €" },
+      { name: "Youssef En-Nesyri", age: 29, position: "Forvet", team: "Fenerbahçe", market_value: "24m €" },
+      { name: "Sofyan Amrabat", age: 29, position: "Orta saha", team: "Fenerbahçe", market_value: "17m €" }
     ];
 
     const searchInput = document.getElementById("searchInput");
